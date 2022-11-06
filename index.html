@@ -1,0 +1,40 @@
+
+    <html>
+    <head> <title>Dom-js</title> 
+    <style>
+        *{margin:0%; padding:0%;}
+        body{background-image:linear-gradient(rgb(134, 134, 201),skyblue);margin-top:100px;}    
+        .h,#result{color:white;}   
+        form{border:2px solid white; margin-top:20px; width: 40%; height:350px; border-radius: 5px;}
+        #result1{margin:10px 0px 20px 0px;height: 30px; border-bottom: 2px solid white;  border-top: 2px solid white; width: 20%;}
+        #matrix{width:50%; height:40px; border-radius:5px; border: none; padding-left:10px;}
+        #inter{width:50%; height:40px; border-radius:5px; border: none; padding-left:10px;}
+        #usat{width:50%; height:40px;  border-radius:5px; border: none;  padding-left:10px;}    
+        #btn{background-color:rgb(9, 89, 236); color:white; border:none; border-radius:5px; width:20%; height:40px; cursor: pointer;}
+        #reult{color:white; position:relative; top:40px; left:-210px; font-size: 23px;}
+   </style>
+
+    </head>
+    <body>
+         <center>  
+        <h1 class="h"> -: PU aggregate Calculator :-</h1>
+       <span id="reult"> Aggregate: </span> <h2 id="result1"></h2><br><br>
+        <input type="number" id="matrix" placeholder="matric marks /1100" ><br><br>
+        <input type="number" id="inter" placeholder="Inter marks /1100" ><br><br>
+        <input type="number" id="usat"  placeholder="UsAT marks /100" ><br><br>
+        <input type="submit" value="Calculate" id="btn" onclick="submitfunction()" >
+
+       </center>
+       <script>
+       function submitfunction(){
+   
+        var a=document.querySelector("#matrix").value;
+        var b=document.querySelector("#inter").value;
+        var c=document.querySelector("#usat").value;
+        var  x=parseFloat(a/1100*25)+ parseFloat(b/1100*60)+parseFloat(c/100*15);
+        
+       document.querySelector("#result1").innerHTML= x;
+                               }    
+      </script>
+   </body>
+    </html>
